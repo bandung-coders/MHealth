@@ -6,10 +6,10 @@
   /* global */
   --main-bg-color: #E5E5E5;
   --main-botton-color: #50C2C9;
-  --number-component-color: #50C2C9;
+  --main-number-component-color: #50C2C9;
   --main-font: 'Poppins', sans-serif;
 
-  --fw-button: 700;
+  --main-fw-button: 700;
 
   /* splash */
   --round-bg-splash: #8FE1D7;
@@ -49,4 +49,54 @@
 html, body{
   box-sizing: border-box;
   font-family: var(--main-font);
+  margin: 0;
+  padding: 0;
+}
+
+.header-desc{
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.round-container{
+  position: relative;
+  top: 0;
+}
+
+.circle{
+  background-color: var(--round-bg-splash);
+  opacity: 44%;
+  width: 150px;
+  height:75px;
+}
+.v1{
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 50% 100%;
+  border-bottom-right-radius: 50% 100%;
+
+  position: absolute;
+  top: -20px;
+  z-index: 0;
+}
+
+.v2{
+
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 50% 100%;
+  border-bottom-right-radius: 50% 100%;
+
+
+  -webkit-transform:rotate(-90deg);
+  -moz-transform:rotate(-90deg);
+  -ms-transform:rotate(-90deg);
+  -o-transform:rotate(-90deg);
+  transform:rotate(-90deg);
+  
+  position: absolute;
+  /* top: 34px; */
+  left: -50px;
+  z-index: 1;
 }
