@@ -7,7 +7,8 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
 
-import App from "./App";
+import App from "./Appss";
+import Apps from "./App";
 
 import SplashScreen from './routes/splash/splashScreen'
 import Splash from './routes/splash/splash'
@@ -22,7 +23,7 @@ root.render(
     <BrowserRouter>
     <Routes>
 
-      <Route path="/" element={<App />}>
+      <Route path="/" element={<Apps />}>
 
         <Route path="splash" element={<SplashScreen/>}>
           <Route path=":splashId" element={<Splash/>}/>

@@ -10,6 +10,7 @@
   --main-font: 'Poppins', sans-serif;
 
   --main-fw-button: 700;
+  --fw-main-input:400;
 
   /* splash */
   --round-bg-splash: #8FE1D7;
@@ -46,6 +47,11 @@
 
 }
 
+*{
+  outline:solid;
+  outline-width: 0.1px;
+
+}
 html, body{
   box-sizing: border-box;
   font-family: var(--main-font);
@@ -65,10 +71,17 @@ html, body{
 }
 
 .circle{
-  background-color: var(--round-bg-splash);
   opacity: 44%;
   width: 150px;
   height:75px;
+}
+
+.circleSplashColor{
+  background-color: var(--round-bg-splash);
+}
+
+.circleMainColor{
+  background-color: var(--round-bg-main);
 }
 .v1{
   border-top-left-radius: 0;
@@ -99,4 +112,90 @@ html, body{
   /* top: 34px; */
   left: -50px;
   z-index: 1;
+}
+
+
+.main-button{
+  background-color: #50C2C9;
+  border: none;
+  border-radius: 61.5px;
+  width: 154px;
+  height:53px;
+  font-size: 16px;
+  color: white;
+  font-weight: var(--main-fw-button);
+  
+  position: relative;
+  overflow: hidden;
+
+  padding: 1rem 2rem;
+  outline: 0;
+  border: 0;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+
+  -webkit-transition: background 400ms;
+  -moz-transition: background 400ms;
+  -ms-transition: background 400ms;
+  -o-transition: background 400ms;
+  transition: background 400ms;
+}
+
+.main-button:hover{
+  background-color: #50C2C9;
+  opacity: 80%;
+  -webkit-transition: background 400ms;
+  -moz-transition: background 400ms;
+  -ms-transition: background 400ms;
+  -o-transition: background 400ms;
+  transition: background 400ms;
+}
+
+.featureBox{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  
+  background: #D9D9D9;
+  border-radius: 25px;
+  width: 134px;
+  height: 132px;
+}
+
+.featureBox > img{
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+.addDetail{
+  display: block;
+  margin-left: 20px;
+  font-size: 10px;
+  font-weight:var(--fw-main-input);
+  color:red;
+}
+
+.addDetail::before{
+  content: "*";
+}
+
+.inputContainer{
+  margin-top: 27px;
+  padding: 0px 25px 0px 25px;
+  display: grid;
+ 
+}
+
+.input{
+  overflow: hidden;
+  font-size: 14px;
+
+  padding: 10px 0px 10px 20px;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
 }
