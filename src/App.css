@@ -128,16 +128,16 @@ html, body{
   position: relative;
   overflow: hidden;
 
-  padding: 1rem 2rem;
+  /* padding: 1rem 2rem;
   outline: 0;
   border: 0;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3); */
 
-  -webkit-transition: background 400ms;
+  /* -webkit-transition: background 400ms;
   -moz-transition: background 400ms;
   -ms-transition: background 400ms;
   -o-transition: background 400ms;
-  transition: background 400ms;
+  transition: background 400ms; */
 }
 
 .main-button:hover{
@@ -198,4 +198,68 @@ html, body{
   -moz-border-radius: 100px;
   -ms-border-radius: 100px;
   -o-border-radius: 100px;
+}
+
+.inputContainer{
+  margin-top: 27px;
+  padding: 0px 25px 0px 25px;
+  display: grid;
+ 
+}
+
+.selectInput{
+  overflow: hidden;
+  font-size: 14px;
+
+  padding: 10px 0px 10px 20px;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+
+  background-color: white;
+}
+
+.selectInput > option{
+  background-color: White;
+  padding: 10px 0px 10px 20px;
+  border-radius: 100px;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+}
+
+.selectInput > option:checked{
+  background-color: rgb(23, 65, 80);
+}
+.selectInput option:hover{
+  background: yellow;
+}
+
+option:hover{
+  background-color: #8FE1D7;
+}
+
+.login-button{
+ background-color: #50C2C9;
+  border: none;
+  width: 274px;
+  height:42px;
+  font-size: 16px;
+  color: white;
+  font-weight: var(--main-fw-button);
+  
+  position: relative;
+  overflow: hidden;
+
+
+}
+
+.buttonlog-container{
+  margin-top: 128px;
+  display: grid;
+  justify-content: center;
 }

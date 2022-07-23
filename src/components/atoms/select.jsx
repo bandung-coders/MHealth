@@ -1,22 +1,23 @@
 import React from 'react'
 import {useState, useEffect} from 'react'
+import Option from './option';
 
-function Input({type="text", placeholder, submitTo, addDetailStatus=true}) {
+function Input({name, submitTo, placeholder}) {
     const [addDetail, setaddDetail]= useState(false);
 
 
-    React.useEffect(() => {
-        setaddDetail(addDetailStatus);
-    }, [addDetailStatus])
+    // React.useEffect(() => {
+    //     setaddDetail(addDetailStatus);
+    // }, [addDetailStatus])
   
     
 
     return ( <>
     <div className='inputContainer'>
-        <input className="input" type={type} placeholder={placeholder} />
-
-        { addDetail && <small className='addDetail'>asda</small>}
-
+        <select className='selectInput' placeholder={placeholder} name={name} id={submitTo}>
+            <option value="Perempuan">Perempuan</option>
+            <option value="laki">Laki-Laki</option>
+        </select>
     </div>
     </> );
 }
