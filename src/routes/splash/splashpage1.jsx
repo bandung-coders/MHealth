@@ -1,13 +1,24 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom'
 import MainButton from '../../components/atoms/button';
-
 function Splashpage1() {
-    const navigate = useNavigate();
+
+   
+
     return ( 
-    <>
-     <h1 className='header-desc'>Konsultasi Dengan Pakar</h1>
-    <MainButton linkPath="/splash2">Selanjutnya</MainButton>
+        <>
+    
+        <div className='splash-content-container'>
+            <h1 className='header-desc'>Konsultasi Dengan Pakar</h1>
+            <span className='micon-splash1'></span>
+            <h4 className='desc'> “ Meski aku tumbuh dengan luka dari orang tua, aku akan tetap berusaha membuat mereka bangga. “</h4>
+        </div>
+
+        <footer className='splash-footer-container'> 
+        <div className='button-position'>
+        <MainButton linkPath="/splash/2">Selanjutnya</MainButton>
+        </div>
+    </footer>
+   
     </>
     );
 }

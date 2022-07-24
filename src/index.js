@@ -35,22 +35,24 @@ root.render(
     <BrowserRouter>
     <Routes>
 
-      <Route path="/" element={<App />}>
-
-        <Route path="splash1" element={<Splashpage1/>}/>
-        <Route path="splash2" element={<Splashpage2/>}/>
-        <Route path="splash3" element={<Splashpage3/>}/>
-
-        <Route path="login" element={<LoginPage/>}/>
-        <Route path="homepage" element={<HomePage/>}/>
-        <Route path="profile" element={<HomeProfile/>}/>
-        <Route path="diagnose" element={<Diagnose/>}/>
+      <Route path="/" element={<Apps />}/>
 
 
-         
+      <Route path="splash" element={<Splash />}>
+        <Route path="1" element={<Splashpage1/>}/>
+        <Route path="2" element={<Splashpage2/>}/>
+        <Route path="3" element={<Splashpage3/>}/>
+      </Route>
+``
+      <Route path="login" element={<LoginPage/>}/>
+      <Route path="homepage" element={<HomePage/>}/>
+      <Route path="profile" element={<HomeProfile/>}/>
+
+      <Route path="diagnose" element={<Diagnose/>}>
+        <Route path="diagnos" element={<Diagnose/>}/>
+      </Route>
 
         
-      </Route>
 
     </Routes>
     </BrowserRouter>

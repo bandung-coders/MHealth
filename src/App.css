@@ -29,9 +29,9 @@
 
 
   /* diagnose section */
-
-  --diagnosa-header-color:black;
-  --diagnosa-question-color:white;
+  --diagnosa-headerbg-color: #50C2C9;
+  --diagnosa-question-color:black;
+  --diagnosa-header-color:white;
 
   --fw-diag-question:400;
   --fw-diag-header:400;
@@ -47,16 +47,17 @@
 
 }
 
-*{
+/* *{
   outline:solid;
   outline-width: 0.1px;
 
-}
+} */
 html, body{
   box-sizing: border-box;
   font-family: var(--main-font);
   margin: 0;
   padding: 0;
+  background-color: var(--main-bg-color);
 }
 
 .header-desc{
@@ -108,10 +109,10 @@ html, body{
   -o-transform:rotate(-90deg);
   transform:rotate(-90deg);
   
-  position: absolute;
-  /* top: 34px; */
+  /* position: absolute;
   left: -50px;
-  z-index: 1;
+  z-index: 1; */
+  margin-left: -50px;
 }
 
 
@@ -262,4 +263,136 @@ option:hover{
   margin-top: 128px;
   display: grid;
   justify-content: center;
+}
+
+.number{
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-number-component-color);
+
+  -webkit-transform: scale(0.8) ;
+  -moz-transform: scale(0.8) ;
+  -ms-transform: scale(0.8) ;
+  -o-transform: scale(0.8) ;
+  transform: scale(0.8) ;
+}
+.number-container{
+  display: flex;
+}
+
+.diag-container{
+  display: grid;
+  position: relative;
+  height: 100%;
+}
+
+.question-header{
+  height: 240px;
+  width: 100%;
+  background-color: var(--diagnosa-headerbg-color);
+  
+} 
+
+.diag-container{
+  /* display: inline-block; */
+  position: relative;
+}
+
+.question-container{
+  position: absolute;
+  top: 130px;
+  justify-content: center;
+}
+
+.question-container2{
+  margin-top: 55px;
+}
+.question-title{
+  
+  font-weight: var(--fw-diag-header);
+  font-size: 1.3rem;
+  margin: 0px 32px ;
+  color: var(--diagnosa-header-color);
+  text-align: center;
+
+}
+
+.answer-container{
+  display: grid;
+  margin-top: 100%; /* can't get to down 100% lol*/
+  margin-bottom: 56px;
+  display: flex;
+  /* position: absolute;
+  bottom: 0;
+  z-index: 10; */
+  justify-content: center;
+  
+  /* align-items: center; */
+}
+
+.number-container{
+  margin-top: 15px;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.color-question{
+  color: var(--diagnosa-question-color);
+}
+
+.answer{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.splash-header-container{
+  /* display: block; */
+  position: relative;
+  top: 0;
+  
+}
+
+.desc{
+  font-weight: var(--fw-splash-desc);
+  color:var(--splash-font-color);
+  margin: 0px 40px;
+  text-align: center;
+}
+
+.splash-footer-container{
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+
+.button-position {
+  text-align: center;
+}
+
+.splash-content-container{
+  margin-top: 51px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.center{
+  text-align: center;
+}
+
+.logo-container{
+  margin-top: 100px;
+}
+
+.splash-btn{
+  margin-top: 160px;
 }

@@ -1,29 +1,49 @@
 import React from 'react';
-import { BrowserRouter } from "react-router-dom";
-import { Routes, Route, useParams, Outlet } from "react-router-dom";
-
-import SplashPage1 from "./splashpage1";
-import SplashPage2 from "./splashpage2";
-import SplashPage3 from "./splashpage3";
-
-
+import { Outlet } from "react-router-dom";
+import MainButton from '../../components/atoms/button';
+import RoundbgSplash from '../../components/atoms/roundbgSplash';
+import { useState } from 'react';
+import '../../components/atoms/assetsvg.css'
 
 function Splash() {
+    const [Header, setHeader] = useState(false);
+    const [hideBtn, sethideBtn] = useState(true)
 
-    const { splashId } = useParams()
+    function headerStatus(){
+        setHeader(!Header)
+    }
+
+    function btnStatus(){
+        sethideBtn(!hideBtn)
+    }
 
     return ( 
     <>
-    {/* <h1 className="'+{splashId}+'">LOL #{splashId}</h1> */}
-    {/* <BrowserRouter>
-        <Routes>
-            <Route path="1" element={<SplashPage1/>}/>
-            <Route path={splashId} element={<SplashPage2/>}/>
-            <Route path={splashId} element={<SplashPage3/>}/>
-        </Routes>
-    </BrowserRouter>
+    
+    {Header && <header className='.splash-header-container'>
+        <RoundbgSplash/>
+    </header >
 
-    <Outlet/> */}
+        
+    }
+        
+    {/* <h1>splash page</h1> */}
+    <Outlet /> 
+
+
+    
+    {hideBtn && <div>
+
+            <div className='logo-container'>
+                <span className='micon-logo'></span>
+            </div>
+
+            <div className='center splash-btn'>
+                <MainButton hideBtnOnClick={btnStatus} hideHeaderOnClick={headerStatus} linkPath="/splash/1">Mulai</MainButton>
+            </div>
+
+        </div>
+        }
     </>
 
 

@@ -4,8 +4,17 @@ function Splashpage1() {
 
     return ( 
     <>
-    <h1>Page 2 Splash</h1>
-    <MainButton linkPath="/splash3">Selanjutnya</MainButton>
+        <div className='splash-content-container'>
+                <span className='micon-splash2'></span>
+                <h1 className='header-desc'>Stop self diagnose</h1>
+                <h4 className='desc'> “Berhenti melakukan self diagnose dengan apa yang terjadi pada diri kamu ya. “</h4>
+            </div>
+
+            <footer className='splash-footer-container'> 
+            <div className='button-position'>
+            <MainButton linkPath="/splash/3">Selanjutnya</MainButton>
+            </div>
+        </footer>
     </>
     );
 }
