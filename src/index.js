@@ -20,13 +20,7 @@ import Splashpage3 from "./routes/splash/splashpage3";
 import LoginPage from "./routes/datadiri/login";
 import HomePage from "./routes/homepage/homePage";
 import HomeProfile from "./routes/homepage/homeProfile";
-import Diagnose from "./routes/diagnose/diag";
-
-
-
-
-
-
+import Diagnose from "./routes/diagnose/diagQna";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -35,7 +29,7 @@ root.render(
     <BrowserRouter>
     <Routes>
 
-      <Route path="/" element={<Apps />}/>
+      <Route path="/" element={<Splash />}/>
 
 
       <Route path="splash" element={<Splash />}>
@@ -44,7 +38,6 @@ root.render(
         <Route path="3" element={<Splashpage3/>}/>
       </Route>
 ``
-      <Route path="login" element={<LoginPage/>}/>
       <Route path="homepage" element={<HomePage/>}/>
       <Route path="profile" element={<HomeProfile/>}/>
 
