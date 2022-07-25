@@ -1,6 +1,4 @@
-function splashData(){
-
-    const sData = [
+const sData = [
             {
                 judul:"konsultasi Dengan Pakar",
                 deskripsi:" Meski aku tumbuh dengan luka dari orang tua, aku akan tetap berusaha membuat mereka bangga."
@@ -16,14 +14,10 @@ function splashData(){
      
         ]
 
-        const data = splashData.map(data => <h1>{data.judul}</h1>)
 
 
-    return (
-        <div>
-        {data}
-        </div>
-    )
-}
 
-export default splashData
+
+export function getSplashData() {
+    return sData;
+  }

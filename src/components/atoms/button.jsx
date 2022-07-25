@@ -8,6 +8,7 @@ function MainButton(props) {
         navigate(props.linkPath)
         props.hideHeaderOnClick()
         props.hideBtnOnClick()
+        props.incrementID()
     }
     return ( <>
     

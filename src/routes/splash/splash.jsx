@@ -6,7 +6,7 @@ import { useState } from 'react';
 import '../../components/atoms/assetsvg.css'
 
 function Splash() {
-    const [Header, setHeader] = useState(false);
+    const [Header, setHeader] = useState(false); {/* Set Header to hidden if button click */}
     const [hideBtn, sethideBtn] = useState(true)
 
     function headerStatus(){

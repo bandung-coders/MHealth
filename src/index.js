@@ -10,7 +10,6 @@ import { Routes, Route } from "react-router-dom";
 import App from "./Appss";
 import Apps from "./App";
 
-// import SplashScreen from './routes/splash/splashScreen'
 import Splash from './routes/splash/splash'
 
 import Splashpage1 from "./routes/splash/splashpage1";
@@ -20,7 +19,8 @@ import Splashpage3 from "./routes/splash/splashpage3";
 import LoginPage from "./routes/datadiri/login";
 import HomePage from "./routes/homepage/homePage";
 import HomeProfile from "./routes/homepage/homeProfile";
-import Diagnose from "./routes/diagnose/diagQna";
+import Diagnose from "./routes/diagnose/diagnose";
+import DiagQuestion from  "./routes/diagnose/diagQna";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -42,7 +42,7 @@ root.render(
       <Route path="profile" element={<HomeProfile/>}/>
 
       <Route path="diagnose" element={<Diagnose/>}>
-        <Route path="diagnos" element={<Diagnose/>}/>
+        <Route path=":questionId" element={<DiagQuestion/>}/>
       </Route>
 
         

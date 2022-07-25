@@ -4,13 +4,15 @@ import MainButton from '../../components/atoms/button';
 import Number from '../../components/atoms/number';
 import {getSplashData} from '../diagnose/datasplash'
 import {useState, useEffect} from 'react'
+import { useNavigate } from 'react-router-dom'
 
-function DiagQna() {
+function Diagnose() {
+    let navigate = useNavigate();
     const [AddId, setAddId] = useState(1);
     let SplashData = getSplashData();
     
     function incrementId(){
-        setAddId(AddId+1)
+        let ariq = setAddId(++AddId);
     }
 
     return ( <>
@@ -40,7 +42,8 @@ function DiagQna() {
         <footer className='answer-container'>
             <div className='answer'>
                 <MainButton>Tidak</MainButton>
-                <MainButton incrementID={incrementId} linkPath={'/dian'+AddId}>Ya</MainButton>
+                <MainButton incrementID={incrementId} linkPath={''+AddId}>Ya</MainButton>
+                {/* <button onClick={()=>{navigate('/')}}>Goto Home</button> */}
             </div>
         </footer>
     </div>
@@ -49,4 +52,4 @@ function DiagQna() {
     </> );
 }
 
-export default DiagQna;
+export default Diagnose;
